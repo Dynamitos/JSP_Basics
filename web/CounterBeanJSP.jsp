@@ -19,6 +19,7 @@
     <body>
         <h1>Hello World!</h1>
         <%
+            c.setCount(1);
             while (c.getCount() <= 10)
             {
                 out.print(c.getCount() + "<br/>");

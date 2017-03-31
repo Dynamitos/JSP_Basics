@@ -1,7 +1,7 @@
 <%-- 
     Document   : ArrayBeanJSP
     Created on : 31.03.2017, 08:52:59
-    Author     : Sabrina
+    Author     : <hier bitte Autor einfügen>
 --%>
 
 <%@page import="bean.ArrayBean"%>

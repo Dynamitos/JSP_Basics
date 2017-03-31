@@ -1,7 +1,7 @@
 <%-- 
     Document   : Counter
     Created on : 31.03.2017, 08:27:17
-    Author     : Sabrina
+    Author     : Der King
 --%>
 
 <%! int counter = 0; %>

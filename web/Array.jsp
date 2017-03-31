@@ -1,7 +1,7 @@
 <%-- 
     Document   : Array
     Created on : 31.03.2017, 08:34:55
-    Author     : Sabrina
+    Author     : Faggot
 --%>
 
 <%! String[] array =

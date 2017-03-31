@@ -6,6 +6,7 @@
 
 <%@page import="bean.ArrayBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page errorPage="errorView.jsp"%>
 <%! ArrayBean a = new ArrayBean();%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,9 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <%
+            a.stetStartIndex(2);
+        %>
         <ol>
             <%
                 for (String s : a.getArary())

@@ -15,5 +15,12 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        
+        <%
+            for (String s : array)
+                {
+                    out.print(s + "<br/>");
+                }
+        %>
     </body>
 </html>

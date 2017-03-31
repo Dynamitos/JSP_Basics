@@ -1,7 +1,7 @@
 <%-- 
     Document   : errorView
     Created on : 31.03.2017, 09:11:46
-    Author     : Sabrina
+    Author     : MaIHobSChoWiEderAnDraufOgspritzt
 --%>
 <%@page isErrorPage="true"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

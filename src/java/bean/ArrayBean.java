@@ -21,6 +21,11 @@ public class ArrayBean
     
     public String getNext()
     {
+        
+        if(index <0 || index >= arary.length)
+        {
+            return "Go Fuck yourself";
+        }
         String element = arary[index];
         index++;
         return element;

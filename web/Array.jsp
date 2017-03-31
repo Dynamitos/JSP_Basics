@@ -1,19 +1,19 @@
 <%-- 
-    Document   : errorView
-    Created on : 17-Mar-2017, 09:14:22
-    Author     : Juergen
+    Document   : Array
+    Created on : 31.03.2017, 08:34:55
+    Author     : Sabrina
 --%>
+
+<%! String[] array = {"Name1", "Name2", "Name3"}; %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error View</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <h1>Hello World!</h1>
-        Message: ${param.message}
-        <!--todo: include FormGoHome -->
     </body>
 </html>

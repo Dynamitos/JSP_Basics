@@ -1,15 +1,12 @@
 <%-- 
-    Document   : Array
-    Created on : 31.03.2017, 08:34:55
+    Document   : ArrayBeanJSP
+    Created on : 31.03.2017, 08:52:59
     Author     : Sabrina
 --%>
 
-<%! String[] array =
-    {
-        "Name1", "Name2", "Name3"
-    };%>
-
+<%@page import="bean.ArrayBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%! ArrayBean a = new ArrayBean();%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,11 +15,12 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <ol type="i">
+        <ol>
             <%
-                for (String s : array)
+                for (String s : a.getArary())
                 {
-                    out.print("<li>" + s + "<li/>");
+
+                    out.print("<li>" + a.getIndex() + ": " + a.getNext() + "</li>");
                 }
             %>
         </ol>

@@ -18,12 +18,22 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+
+        <form name ="input" action="CounterBeanJSP.jsp" method="GET">
+            <input type="text" name="count" placeholder="Counter"/>
+            <input type="submit" value="GO"/>
+        </form>
+
         <%
-            c.setCount(1);
-            while (c.getCount() <= 10)
+            String text = request.getParameter("count");
+            if (text != null)
             {
-                out.print(c.getCount() + "<br/>");
-                c.incr();
+                c.setCount(Integer.parseInt(text));
+                while (c.getCount() <= 10)
+                {
+                    out.print(c.getCount() + "<br/>");
+                    c.incr();
+                }
             }
         %>
     </body>

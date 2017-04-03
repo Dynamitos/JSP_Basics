@@ -16,6 +16,7 @@
         <h1>Hello World!</h1>
         
         <%
+            
             MVCCounterBean cb = (MVCCounterBean) request.getAttribute("counterBeanInit");
         %>
 

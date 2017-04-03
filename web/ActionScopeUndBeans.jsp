@@ -1,7 +1,7 @@
 <%-- 
     Document   : ActionScopeUndBeans
     Created on : 03.04.2017, 13:36:19
-    Author     : Sabrina
+    Author     : HochMotiviert
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,7 +14,7 @@
     <body>
         <h1>Hello World!</h1>
         
-        <jsp:useBean id="counter" class="bean.CounterBean" scope="request" >
+        <jsp:useBean id="counter" class="bean.CounterBean" scope="application" >
             
         </jsp:useBean>
         <% counter.incr(); %>

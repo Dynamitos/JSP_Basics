@@ -4,8 +4,9 @@
     Author     : IchMagKeineSchimpfworte
 --%>
 
+
 <%@page import="bean.MVCCounterBean"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page errorPage="errorView.jsp" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +19,10 @@
         <%
             
             MVCCounterBean cb = (MVCCounterBean) request.getAttribute("counterBeanInit");
+            if(cb == null)
+            {
+                throw new Exception("CounterBeanInit hat nichts zurückgegeben");
+            }
         %>
         
         Count-Action: <jsp:getProperty name="counterBeanInit" property="count"></jsp:getProperty> <br/>

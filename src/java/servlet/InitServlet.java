@@ -6,6 +6,7 @@
 package servlet;
 
 import bean.CounterBean;
+import bean.MVCCounterBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 })
 public class InitServlet extends HttpServlet
 {
-    private CounterBean cb;
+    private MVCCounterBean cbInit;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +38,10 @@ public class InitServlet extends HttpServlet
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        cb.incr();
-        request.setAttribute("counterBean", cb);
-        request.getSession().setAttribute("counterBean", cb);
-        request.getServletContext().setAttribute("counterBean", cb);
+        cbInit.incr();
+        request.setAttribute("counterBeanInit", cbInit);
+        request.getSession().setAttribute("counterBeanInit", cbInit);
+        request.getServletContext().setAttribute("counterBeanInit", cbInit);
         
         request.getRequestDispatcher("MVCCounter.jsp").forward(request, response);
     }
@@ -48,8 +49,8 @@ public class InitServlet extends HttpServlet
     @Override
     public void init() throws ServletException
     {
-        cb = new CounterBean();
-        cb.setCount(3);
+        cbInit = new MVCCounterBean();
+        cbInit.setCount(3);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

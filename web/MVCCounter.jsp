@@ -4,7 +4,7 @@
     Author     : IchMagKeineSchimpfworte
 --%>
 
-<%@page import="bean.CounterBean"%>
+<%@page import="bean.MVCCounterBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,8 +16,9 @@
         <h1>Hello World!</h1>
         
         <%
-            CounterBean cb = (CounterBean) request.getAttribute("counterBean");
+            MVCCounterBean cb = (MVCCounterBean) request.getAttribute("counterBeanInit");
         %>
-        <jsp:getProperty name="counterBean" property="count"></jsp:getProperty>
+
+        <jsp:getProperty name="counterBeanInit" property="count"></jsp:getProperty> <br/>
     </body>
 </html>

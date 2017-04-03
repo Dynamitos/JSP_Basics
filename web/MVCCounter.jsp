@@ -19,7 +19,8 @@
             
             MVCCounterBean cb = (MVCCounterBean) request.getAttribute("counterBeanInit");
         %>
-
-        <jsp:getProperty name="counterBeanInit" property="count"></jsp:getProperty> <br/>
+        
+        Count-Action: <jsp:getProperty name="counterBeanInit" property="count"></jsp:getProperty> <br/>
+        Count-Expression: ${counterBeanInit.count}
     </body>
 </html>

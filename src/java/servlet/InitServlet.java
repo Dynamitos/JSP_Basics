@@ -41,6 +41,8 @@ public class InitServlet extends HttpServlet
         request.setAttribute("counterBean", cb);
         request.getSession().setAttribute("counterBean", cb);
         request.getServletContext().setAttribute("counterBean", cb);
+        
+        request.getRequestDispatcher("MVCCounter.jsp").forward(request, response);
     }
 
     @Override

@@ -20,9 +20,15 @@
     <body>
         <h1>Hello World!</h1>
         <ol type="i">
-
-            <c:forEach var="element" items="array">
-                <c:out value="${element}"/>
+            <%
+                request.setAttribute("array", array);
+            %>
+            <c:forEach var="element" items="${array}" varStatus="ref">
+                <li>
+                    <c:out value="${ref}"/>
+                    <c:out value="${ref.count}"/>
+                    <c:out value="${element}"/>
+                </li>
             </c:forEach>
         </ol>
     </body>

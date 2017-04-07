@@ -1,3 +1,4 @@
+<%@page import="bean.CollectionBean"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : Array
@@ -5,10 +6,11 @@
     Author     : JST-EEL
 --%>
 
-<%! String[] array =
-    {
-        "Name1", "Name2", "Name3"
-    };%>
+<%!
+    CollectionBean c = new CollectionBean();
+    
+%>
+<%request.setAttribute("c", c);%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,12 +22,8 @@
     <body>
         <h1>Hello World!</h1>
         <ol type="i">
-            <%
-                request.setAttribute("array", array);
-            %>
-            <c:forEach var="element" items="${array}" varStatus="ref">
+            <c:forEach var="element" items="${c.array}" varStatus="ref">
                 <li>
-                    <c:out value="${ref}"/>
                     <c:out value="${ref.count}"/>
                     <c:out value="${element}"/>
                 </li>
